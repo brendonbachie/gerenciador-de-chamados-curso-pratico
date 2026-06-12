@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Novo chamado — Curso Prático</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body data-page="novo">
+  <header class="topo">
+    <h1>Chamados — Curso Prático</h1>
+    <nav>
+      <a href="/">Filas</a>
+      <a href="/novo.html" class="ativo">Novo chamado</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Registrar chamado do WhatsApp</h2>
+    <p class="texto" style="color:var(--text-dim);max-width:640px">
+      Cole o conteúdo recebido no WhatsApp. Informe o número de origem e o
+      horário <strong>original</strong> da mensagem — o sistema normaliza,
+      classifica por produto e calcula o SLA a partir desse horário.
+    </p>
+
+    <form id="form-novo" class="cartao">
+      <div class="campo">
+        <label for="remetente">Remetente (número do WhatsApp)</label>
+        <input id="remetente" name="remetente" placeholder="+55 11 9XXXX-XXXX" required />
+      </div>
+      <div class="campo">
+        <label for="timestamp_origem">Horário original da mensagem</label>
+        <input id="timestamp_origem" name="timestamp_origem" type="datetime-local" required />
+      </div>
+      <div class="campo">
+        <label for="texto">Conteúdo da mensagem</label>
+        <textarea id="texto" name="texto" placeholder="Cole aqui o texto recebido…" required></textarea>
+      </div>
+      <div style="display:flex;gap:12px">
+        <button type="submit">Registrar chamado</button>
+        <a href="/"><button type="button" class="secundario">Cancelar</button></a>
+      </div>
+    </form>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

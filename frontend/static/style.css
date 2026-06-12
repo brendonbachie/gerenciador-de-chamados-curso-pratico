@@ -1,0 +1,174 @@
+/* Chamados — Curso Prático · estilos (sem framework) */
+
+:root {
+  --bg: #0f172a;
+  --surface: #1e293b;
+  --surface-2: #273449;
+  --border: #334155;
+  --text: #e2e8f0;
+  --text-dim: #94a3b8;
+  --accent: #38bdf8;
+  --accent-strong: #0ea5e9;
+
+  --ok: #22c55e;
+  --atencao: #f59e0b;
+  --estourado: #ef4444;
+
+  --baixa: #64748b;
+  --media: #3b82f6;
+  --alta: #f59e0b;
+  --urgente: #ef4444;
+
+  --radius: 10px;
+  --gap: 16px;
+  --maxw: 1080px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+header.topo {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--gap);
+}
+header.topo h1 { font-size: 1.15rem; margin: 0; }
+header.topo nav { display: flex; gap: 18px; font-size: 0.95rem; }
+header.topo nav a.ativo { color: var(--text); font-weight: 600; }
+
+main {
+  max-width: var(--maxw);
+  margin: 24px auto;
+  padding: 0 24px 48px;
+}
+
+h2 { font-size: 1.05rem; margin: 28px 0 12px; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.04em; }
+h2:first-child { margin-top: 0; }
+
+/* Filtros e formulários */
+.barra {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: end;
+  margin-bottom: 18px;
+}
+label { display: block; font-size: 0.8rem; color: var(--text-dim); margin-bottom: 4px; }
+
+input, select, textarea, button {
+  font: inherit;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 9px 11px;
+}
+textarea { width: 100%; min-height: 140px; resize: vertical; }
+input:focus, select:focus, textarea:focus { outline: 2px solid var(--accent); border-color: transparent; }
+
+button {
+  cursor: pointer;
+  background: var(--accent-strong);
+  border-color: var(--accent-strong);
+  color: #04293b;
+  font-weight: 600;
+}
+button:hover { background: var(--accent); border-color: var(--accent); }
+button.secundario { background: transparent; color: var(--text); border-color: var(--border); }
+button.secundario:hover { background: var(--surface-2); }
+button:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.campo { display: flex; flex-direction: column; }
+form.cartao { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; max-width: 640px; display: grid; gap: 16px; }
+
+/* Cards de chamado */
+.lista { display: grid; gap: 12px; }
+.chamado {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  display: grid;
+  gap: 8px;
+}
+.chamado:hover { border-color: var(--accent-strong); }
+.chamado .linha { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.chamado .texto { color: var(--text-dim); font-size: 0.92rem; }
+.chamado .meta { font-size: 0.78rem; color: var(--text-dim); display: flex; gap: 14px; flex-wrap: wrap; }
+.chamado .meta b { color: var(--text); font-weight: 600; }
+
+/* Badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  padding: 3px 9px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--surface-2);
+  color: var(--text);
+}
+.badge.produto { background: #1e3a5f; border-color: #2c5688; }
+.badge.estado { background: #312e5f; border-color: #4b478f; }
+
+.badge.prio-baixa   { background: color-mix(in srgb, var(--baixa) 22%, transparent); border-color: var(--baixa); }
+.badge.prio-media   { background: color-mix(in srgb, var(--media) 22%, transparent); border-color: var(--media); }
+.badge.prio-alta    { background: color-mix(in srgb, var(--alta) 25%, transparent); border-color: var(--alta); }
+.badge.prio-urgente { background: color-mix(in srgb, var(--urgente) 28%, transparent); border-color: var(--urgente); }
+
+.badge.sla-ok        { background: color-mix(in srgb, var(--ok) 20%, transparent); border-color: var(--ok); }
+.badge.sla-atencao   { background: color-mix(in srgb, var(--atencao) 22%, transparent); border-color: var(--atencao); }
+.badge.sla-estourado { background: color-mix(in srgb, var(--estourado) 26%, transparent); border-color: var(--estourado); }
+
+.badge.flag { background: color-mix(in srgb, var(--estourado) 18%, transparent); border-color: var(--estourado); }
+
+/* Filas (colunas) */
+.filas { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: var(--gap); }
+.fila { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 12px; }
+.fila h3 { margin: 0 0 10px; font-size: 0.9rem; display: flex; justify-content: space-between; align-items: center; }
+.fila .conta { background: var(--surface-2); border-radius: 999px; padding: 1px 9px; font-size: 0.78rem; color: var(--text-dim); }
+.fila .lista { gap: 8px; }
+.fila .chamado { padding: 10px 12px; }
+
+/* Detalhe */
+.grid-2 { display: grid; grid-template-columns: 2fr 1fr; gap: var(--gap); align-items: start; }
+.painel { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px; }
+.painel + .painel { margin-top: var(--gap); }
+dl.dados { display: grid; grid-template-columns: auto 1fr; gap: 6px 16px; margin: 0; font-size: 0.9rem; }
+dl.dados dt { color: var(--text-dim); }
+dl.dados dd { margin: 0; }
+.bloco-texto { white-space: pre-wrap; background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 12px; font-size: 0.9rem; }
+
+/* Timeline de transições */
+.timeline { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.timeline li { border-left: 2px solid var(--accent-strong); padding: 2px 0 2px 14px; }
+.timeline .quando { font-size: 0.76rem; color: var(--text-dim); }
+.timeline .o-que { font-weight: 600; }
+
+/* Mensagens */
+.aviso { padding: 11px 14px; border-radius: 8px; font-size: 0.9rem; margin: 12px 0; }
+.aviso.erro { background: color-mix(in srgb, var(--estourado) 18%, transparent); border: 1px solid var(--estourado); }
+.aviso.ok { background: color-mix(in srgb, var(--ok) 16%, transparent); border: 1px solid var(--ok); }
+.vazio { color: var(--text-dim); font-size: 0.9rem; padding: 14px; text-align: center; }
+
+@media (max-width: 760px) {
+  .grid-2 { grid-template-columns: 1fr; }
+}

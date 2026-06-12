@@ -1,0 +1,9 @@
+Vamos iniciar o projeto de gestão de chamados do Curso Prático. Comece pelo núcleo de dados e fluxo, depois a triagem por produto.
+
+1. Modele o chamado (ticket) com: id, produto (bancos|modulos|simulados), remetente do WhatsApp, timestamp de origem, texto normalizado, anexos, estado (aberto|em_andamento|resolvido), prioridade, histórico de transições e flags de qualidade. Use SQLite via camada em core/ (toda escrita centralizada, nunca shell direto).
+2. Acione o agente normalizador-whatsapp para definir como o payload bruto do WhatsApp vira um chamado estruturado (preservando remetente e timestamp original).
+3. Acione o agente gestor-fluxo-chamados para implementar a máquina de estados, as transições com timestamp/motivo e o cálculo de SLA.
+4. Para a classificação e extração de campos por produto, delegue aos agentes triagem-bancos-praticos, triagem-modulos-praticos e triagem-simulados-praticos conforme o produto do chamado.
+5. Peça ao agente test-writer a suíte de testes da máquina de estados e da normalização, e ao security-reviewer uma revisão do tratamento dos dados pessoais dos usuários (telefone/identificação).
+
+Comece confirmando a modelagem do chamado e a estrutura de pastas antes de escrever código.

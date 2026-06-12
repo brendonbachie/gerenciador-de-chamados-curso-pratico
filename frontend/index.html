@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chamados — Curso Prático</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body data-page="index">
+  <header class="topo">
+    <h1>Chamados — Curso Prático</h1>
+    <nav>
+      <a href="/" class="ativo">Filas</a>
+      <a href="/novo.html">Novo chamado</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Filas por produto</h2>
+    <div id="filas" class="filas"></div>
+
+    <h2>Todos os chamados</h2>
+    <div class="barra">
+      <div class="campo">
+        <label for="f-produto">Produto</label>
+        <select id="f-produto">
+          <option value="">Todos</option>
+          <option value="bancos">Bancos</option>
+          <option value="modulos">Módulos</option>
+          <option value="simulados">Simulados</option>
+        </select>
+      </div>
+      <div class="campo">
+        <label for="f-estado">Estado</label>
+        <select id="f-estado">
+          <option value="">Todos</option>
+          <option value="aberto">Aberto</option>
+          <option value="em_andamento">Em andamento</option>
+          <option value="resolvido">Resolvido</option>
+        </select>
+      </div>
+    </div>
+    <div id="lista" class="lista"></div>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
