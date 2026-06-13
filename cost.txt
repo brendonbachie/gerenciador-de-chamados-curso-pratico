@@ -1,0 +1,24 @@
+root@DESKTOP-A4N8RBQ:/mnt/c/Users/casnav/Desktop/chamados_cp# python3 cost.py
+Não achei por nome. Listando TODAS as sessões (pegue a do chamados):
+============================================================
+pasta: -mnt-c-Users-casnav-Desktop-42-Rio-C-codexion
+msgs=23 (subagente=0) | período 2026-06-02T14:22:22.824Z -> 2026-06-02T14:23:50.041Z
+input_fresco=37 cache_creation=19,322
+cache_read=437,246 output=6,165
+TOTAL=462,770
+modelos (por output): {'claude-sonnet-4-6': 6165}
+============================================================
+pasta: -mnt-c-Users-casnav-Desktop-RAG-VSNT
+msgs=315 (subagente=0) | período 2026-05-19T02:10:08.485Z -> 2026-05-19T16:03:49.822Z
+input_fresco=675 cache_creation=413,794
+cache_read=13,840,334 output=150,794
+TOTAL=14,405,597
+modelos (por output): {'claude-sonnet-4-6': 150794}
+============================================================
+pasta: -mnt-c-Users-casnav-Desktop-projeto-alexa
+msgs=1066 (subagente=0) | período 2026-05-23T22:14:04.680Z -> 2026-05-24T21:15:51.420Z
+input_fresco=1,767 cache_creation=1,183,931
+cache_read=82,537,982 output=573,579
+TOTAL=84,297,259
+modelos (por output): {'claude-sonnet-4-6': 573579}
+root@DESKTOP-A4N8RBQ:/mnt/c/Users/casnav/Desktop/chamados_cp#
