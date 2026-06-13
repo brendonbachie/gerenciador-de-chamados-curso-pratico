@@ -36,3 +36,13 @@ bases: ['/home/casnav/.claude/projects', '/root/.claude/projects']
 -mnt-c-Users-casnav-Desktop-RAG-VSNT | arq=3 linhas=740 msgs_uso=315 tokens=14,405,597
 -mnt-c-Users-casnav-Desktop-projeto-alexa | arq=3 linhas=2745 msgs_uso=1066 tokens=84,297,259
 root@DESKTOP-A4N8RBQ:/mnt/c/Users/casnav/Desktop/chamados_cp#
+
+
+root@DESKTOP-A4N8RBQ:/mnt/c/Users/casnav/Desktop/chamados_cp# python3 cost3.py
+msgs 174 | subagente(sidechain) 0 | periodo 2026-06-11T19:20:57.059Z -> 2026-06-12T18:16:28.376Z
+input_fresco    50179
+cache_creation  657849
+cache_read      14275214
+output          251548
+modelos         {'claude-opus-4-8': 251548, '<synthetic>': 0}
+root@DESKTOP-A4N8RBQ:/mnt/c/Users/casnav/Desktop/chamados_cp#
