@@ -22,3 +22,17 @@ cache_read=82,537,982 output=573,579
 TOTAL=84,297,259
 modelos (por output): {'claude-sonnet-4-6': 573579}
 root@DESKTOP-A4N8RBQ:/mnt/c/Users/casnav/Desktop/chamados_cp#
+
+
+root@DESKTOP-A4N8RBQ:/mnt/c/Users/casnav/Desktop/chamados_cp# python3 cos2.py
+bases: ['/home/casnav/.claude/projects', '/root/.claude/projects']
+-mnt-c-Users-casnav-Desktop-RPG-datagen | arq=1 linhas=534 msgs_uso=223 tokens=37,620,096
+-mnt-c-Users-casnav-Desktop-agent-orchestrator | arq=4 linhas=471 msgs_uso=176 tokens=10,493,276
+-mnt-c-Users-casnav-Desktop-chamados-cp | arq=1 linhas=432 msgs_uso=174 tokens=15,234,790   <<<< CHAMADOS
+-mnt-c-Users-casnav-Desktop-placa--ATUAL--VSNT-LAB--VERS-O-5-0- | arq=1 linhas=148 msgs_uso=56 tokens=3,856,274
+-mnt-c-Users-casnav-Desktop-rpg-RPG | arq=1 linhas=1290 msgs_uso=516 tokens=74,693,022
+-mnt-c-Users-casnav-Desktop-42-Rio | arq=0 linhas=0 msgs_uso=0 tokens=0
+-mnt-c-Users-casnav-Desktop-42-Rio-C-codexion | arq=1 linhas=57 msgs_uso=23 tokens=462,770
+-mnt-c-Users-casnav-Desktop-RAG-VSNT | arq=3 linhas=740 msgs_uso=315 tokens=14,405,597
+-mnt-c-Users-casnav-Desktop-projeto-alexa | arq=3 linhas=2745 msgs_uso=1066 tokens=84,297,259
+root@DESKTOP-A4N8RBQ:/mnt/c/Users/casnav/Desktop/chamados_cp#
